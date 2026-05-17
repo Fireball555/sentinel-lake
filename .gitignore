@@ -1,0 +1,26 @@
+# Virtual environment
+.venv/
+
+# Environment variables (contains secrets)
+.env
+gemini
+
+# Raw dataset (large CSV, downloaded separately per README)
+data/
+
+# Delta Lake data and checkpoints written by test/dev runs
+spark-warehouse/
+delta-table/
+__pycache__/
+*.pyc
+*.pyo
+
+# Spark logs
+derby.log
+metastore_db/
+
+# OS
+.DS_Store
+.claude/
+CLAUDE.md
+test_spark.py
