@@ -16,6 +16,22 @@ Apache Spark, and an LLM.
 
 ![Results Table](screenshots/04-results-table.png)
 
+While this runs on 125,973 records locally, the choice of Spark and Delta Lake means this exact code could be deployed to a Databricks cluster to handle billions of security events without changing a single line.
+
+## Architecture
+
+```mermaid
+flowchart LR
+    A[Raw CSV\nNSL-KDD Dataset] -->|spark.read.csv| B[Spark Ingest\ningest.py]
+    B -->|delta write| C[(Bronze\nRaw Logs)]
+    C --> D[(Silver\nCleaned & Typed)]
+    D --> E[(Gold\nAggregated)]
+    E --> F[SQL Queries\nqueries.py]
+    E --> G[LLM Layer\nGroq + LLaMA 3.3 70B]
+    F --> H[Streamlit UI\napp.py]
+    G --> H
+```
+
 ---
 
 ## What It Does
