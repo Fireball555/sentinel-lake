@@ -73,7 +73,7 @@ data engineering.
 
 ## Project Structure
 
-'''
+```
 sentinel-lake/
 ├── ingest.py          # Load NSL-KDD CSV into Delta Lake
 ├── queries.py         # Six threat detection SQL queries
@@ -83,7 +83,7 @@ sentinel-lake/
 ├── requirements.txt
 ├── .env               # API keys (not committed)
 └── data/              # Raw dataset (not committed)
-'''
+```
 
 ---
 
