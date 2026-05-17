@@ -82,7 +82,6 @@ sentinel-lake/
 ├── requirements.txt
 ├── .env               # API keys (not committed)
 └── data/              # Raw dataset (not committed)
-
 ---
 
 ## Setup
